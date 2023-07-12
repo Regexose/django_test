@@ -1,5 +1,5 @@
 from django.db import models
-
+#from https://soshace.com/upload-multiple-images-to-a-django-model-without-plugins/
 
 class Project(models.Model):
     title = models.CharField(max_length=250)
