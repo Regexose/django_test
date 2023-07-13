@@ -8,8 +8,9 @@
 
 {% extends 'base.html' %}
 {% block page_content %}
+{% for project in projects %}
 <div class="container"
-     {% for project in projects %}
+
         <div class="row">
               <div class="col-md-6 mb-3 mb-sm-0">
                   <div class="card">
