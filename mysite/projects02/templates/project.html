@@ -8,25 +8,35 @@
 
 {% extends 'base.html' %}
 {% block page_content %}
-<div class="row row-cols-1 row-cols-md-2">
-    {% for project in projects %}
-    <div class="col mb-2">
-      <div class="card">
-        <div class="view overlay">
-          <img class="card-img-top" src="{{project.image.url}}" alt="">
-          <a href="#!">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+<div class="container"
+     {% for project in projects %}
+        <div class="row">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="{{project.image.url}}" alt="">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+                <div class="col">
+                     <div class="card-body">
+                        <h4 class="card-title">{{project.titel}}</h4
+                        <p class="card-text">{{project.beschreibung}}</p>
+                        <a href="{% url 'projects02:detail' project.id %}" class="btn btn-primary btn-md">Read more</a>
+                         </div>
+                    </div>
+                <div class="col">
+                    <div class="card-body">
+                        <h4 class="card-title">{{project.title}}</h4
+                        <p class="card-text">{{project.description}}</p>
+                        <a href="{% url 'projects02:detail' project.id %}" class="btn btn-primary btn-md">Read more</a>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <h4 class="card-title">{{project.title}}</h4>
-          <p class="card-text">{{project.description}}</p>
-          <a href="{% url 'projects02:detail' project.id %}" class="btn btn-primary btn-md">Read more</a>
-        </div>
+        {% endfor %}
       </div>
-    </div>
-    {% endfor %}
-  </div>
+</div>
 {% endblock %}
 
 </body>
