@@ -9,7 +9,7 @@ def project_view(request):
 def detail_view(request, id):
     project = get_object_or_404(Project, id=id)
     photos = ProjectImage.objects.filter(project=project)
-    return render(request, 'detail.html', {
+    return render(request, 'detail_grid.html', {
         'project': project,
         'photos': photos
     })
