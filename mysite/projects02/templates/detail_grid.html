@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
                      <h4 class="card-title">{{project.titel}}</h4
-                    <p class="card-text">{{project.beschreibung}}</p>
+                    <p class="card-text">{{project.beschreibung |safe}}</p>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
                      <h4 class="card-title">{{project.title}}</h4
-                    <p class="card-text">{{project.description}}</p>
+                    <p class="card-text">{{project.description| safe}}</p>
                 </div>
             </div>
         </div>
