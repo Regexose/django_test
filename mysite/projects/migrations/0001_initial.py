@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=100)),
                 ('description', models.TextField()),
                 ('technology', models.CharField(max_length=20)),
-                ('image', models.FilePathField(path='/static_root')),
+                ('image', models.FilePathField(path='/static')),
             ],
         ),
     ]

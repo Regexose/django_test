@@ -8,8 +8,10 @@
     {%endblock%}
 </head>
 <body>
-{% load static %}
+
 {% block page_content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
 
 <div class="container">
     <div class="row">
@@ -17,7 +19,7 @@
             <div class="card">
                 <div class="card-body">
                      <h4 class="card-title">{{project.titel}}</h4
-                    <p class="card-text">{{project.beschreibung |safe}}</p>
+                    <p class="card-text">{{project.beschreibung| safe}}</p>
                 </div>
             </div>
         </div>

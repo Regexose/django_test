@@ -6,7 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     technology = models.CharField(max_length=20)
-    image = models.FilePathField(path="/static_root")
+    image = models.FilePathField(path="/static")
     pub_date = models.DateTimeField("date published", default=datetime.date.today)
 
     def __str__(self):
