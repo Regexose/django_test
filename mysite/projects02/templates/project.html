@@ -7,8 +7,10 @@
 <body>
 
 {% extends 'base.html' %}
-{% load static %}
+
 {% block page_content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
 {% for project in projects %}
 <div class="container"
 
@@ -17,7 +19,12 @@
                   <div class="card">
                     <div class="view overlay">
                         <a href="{% url 'projects02:detail' project.id %}" >
-                            <img class="card-img-top" src="{{project.image.url}}" alt="">
+                                <img class="card-img-top" src="{{project.image.url}}" alt="">
+                                <div class="title">
+                                    <h2>{{project.titel}}</h2>
+                                </div>
+                            </div>
+
                         </a>
                         <div class="mask rgba-white-slight"></div>
 
