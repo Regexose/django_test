@@ -16,10 +16,11 @@
               <div class="col-md-7 mb-3 mb-sm-2">
                   <div class="card">
                     <div class="view overlay">
-                      <img class="card-img-top" src="{{project.image.url}}" alt="">
-                      <a href="#!">
+                        <a href="{% url 'projects02:detail' project.id %}" >
+                            <img class="card-img-top" src="{{project.image.url}}" alt="">
+                        </a>
                         <div class="mask rgba-white-slight"></div>
-                      </a>
+
                         <div class="row">
                               <div class="col">
                                 <div class="card">
