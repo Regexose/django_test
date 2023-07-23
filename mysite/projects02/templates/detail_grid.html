@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    {%block head%}
+    <title>{{project.titel}}</title>
+    {%endblock%}
+</head>
+<body>
+
+{% block page_content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                     <h4 class="card-title">{{project.titel}}</h4
+                    <p class="card-text">{{project.beschreibung| safe}}</p>
+                </div>
+            </div>
+        </div>
+           <div class="col">
+            <div class="card">
+                <div class="card-body">
+                     <h4 class="card-title">{{project.title}}</h4
+                    <p class="card-text">{{project.description| safe}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+         {% for p in photos %}
+            <div class="card">
+                <div class="card-body">
+                    <img class="d-block w-100" src="{{p.images.url}}">
+                </div>
+            </div>
+        {% endfor %}
+     </div>
+</div>
+
+{%endblock%}
+
+</body>
+</html>

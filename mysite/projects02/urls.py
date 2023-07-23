@@ -9,4 +9,4 @@ app_name = "projects02"
 urlpatterns = [
                   path('', views.project_view, name='project'),
                   path('<int:id>/', views.detail_view, name='detail')
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

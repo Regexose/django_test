@@ -1,0 +1,14 @@
+.card-body {
+background-color: #e8e6e6;
+}
+.card {
+border: 0.0;
+}
+.card-img-top {
+position: relative;
+}
+.title {
+position: absolute;
+top: 50%;
+right: 50%;
+}
