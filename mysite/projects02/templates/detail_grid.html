@@ -10,7 +10,9 @@
 <body>
 
 {% block page_content %}
+{% load embed_video_tags %}
 {% load static %}
+
 <link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
 
 <div class="container">
@@ -37,6 +39,17 @@
             <div class="card">
                 <div class="card-body">
                     <img class="d-block w-100" src="{{p.images.url}}">
+                </div>
+            </div>
+        {% endfor %}
+     </div>
+       <div class="row">
+
+         {% for e in embeds %}
+            <div class="card">
+                <div class="card-body">
+                   {% e.video.url '426x240' %}
+                    {{ e.name }}
                 </div>
             </div>
         {% endfor %}
