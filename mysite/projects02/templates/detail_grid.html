@@ -10,7 +10,9 @@
 <body>
 
 {% block page_content %}
+{% load embed_video_tags %}
 {% load static %}
+
 <link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
 
 <div class="container">
@@ -41,6 +43,16 @@
             </div>
         {% endfor %}
      </div>
+    <div class="row">
+
+     {% for e in embeds %}
+        <div class="card">
+            <div class="card-body">
+               {% video e.video 'medium' %}
+            </div>
+        </div>
+    {% endfor %}
+   </div>
 </div>
 
 {%endblock%}
