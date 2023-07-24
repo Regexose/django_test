@@ -43,17 +43,16 @@
             </div>
         {% endfor %}
      </div>
-       <div class="row">
+    <div class="row">
 
-         {% for e in embeds %}
-            <div class="card">
-                <div class="card-body">
-                   {% e.video.url '426x240' %}
-                    {{ e.name }}
-                </div>
+     {% for e in embeds %}
+        <div class="card">
+            <div class="card-body">
+               {% video e.video 'medium' %}
             </div>
-        {% endfor %}
-     </div>
+        </div>
+    {% endfor %}
+   </div>
 </div>
 
 {%endblock%}
