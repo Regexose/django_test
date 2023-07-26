@@ -10,6 +10,7 @@
     {% endblock %}
 </head>
 <body>
+
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -19,8 +20,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Projects</a>
+                <a class="nav-item nav-link active" href="{% url 'projects02:index' %}">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for p in projects %}
+                                <a class="dropdown-item" href="{% url 'projects02:detail' p.id %}">{{p.title}}</a>
+                            {% endfor %}
+                        </div>
+
+                    </li>
                 <a class="nav-item nav-link" href="#">Contact</a>
                 <a class="nav-item nav-link disabled" href="#">CV</a>
             </div>
@@ -28,6 +39,7 @@
     </nav>
 </div>
 {% block page_content %}
+
 {% endblock %}
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

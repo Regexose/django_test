@@ -14,12 +14,8 @@ right: 50%;
 }
 
 .navbar{
-    background-color: #F6F5D7;
+    background-color: #e8e6e6;
     margin:0%;
     padding: 0%;
     border: 1px solid rgb(0, 0, 0);
-}
-
-.title1{
-    font-family: 'sans-serif';
 }
