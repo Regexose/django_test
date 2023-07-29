@@ -14,6 +14,17 @@ def project_view(request):
     projects = Project.objects.all()
     return render(request, 'project.html', {'projects': projects})
 
+def detail_carousel(request, id):
+    projects = Project.objects.all()
+    project = get_object_or_404(Project, id=id)
+    photos = ProjectImage.objects.filter(project=project)
+    embeds = ProjectEmbed.objects.filter(project=project)
+    return render(request, 'detail_carousel.html', {
+        'projects': projects,
+        'project': project,
+        'photos': photos,
+        'embeds': embeds
+    })
 
 def detail_view(request, id):
     projects = Project.objects.all()

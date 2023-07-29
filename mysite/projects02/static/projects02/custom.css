@@ -7,15 +7,20 @@ border: 0.0;
 .card-img-top {
 position: relative;
 }
+
 .title {
 position: absolute;
 top: 50%;
 right: 50%;
 }
 
-.navbar{
+.navbar {
     background-color: #e8e6e6;
     margin:0%;
-    padding: 0%;
-    border: 1px solid rgb(0, 0, 0);
+    border: 0px;
+    display: justify-content-between;
+}
+
+.sticky-top {
+position: fixed;
 }

@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel='stylesheet' href="{% static 'projects02/custom.css' %}" type='text/css' />
 
     {%block head%}
     <title>Title</title>
     {% endblock %}
 </head>
 <body>
-
+<br>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+
+        <a class="navbar-brand mx-4" href="#">borisjöns</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="{% url 'projects02:index' %}">Home</a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% for p in projects %}
-                                <a class="dropdown-item" href="{% url 'projects02:detail' p.id %}">{{p.title}}</a>
-                            {% endfor %}
-                        </div>
-
-                    </li>
+                <a class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for p in projects %}
+                        <a class="dropdown-item" href="{% url 'projects02:carousel' p.id %}">{{p.title}}</a>
+                        {% endfor %}
+                    </div>
+                </a>
                 <a class="nav-item nav-link" href="#">Contact</a>
                 <a class="nav-item nav-link disabled" href="#">CV</a>
             </div>
         </div>
-    </nav>
+</div>
+</nav>
+
 </div>
 {% block page_content %}
 

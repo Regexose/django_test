@@ -27,7 +27,8 @@ class Project(models.Model):
 
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, default=None, on_delete=models.CASCADE)
-    images = models.FileField(upload_to='pics/')
+    image = models.FileField(upload_to='pics/')
+    credit = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return self.project.title
