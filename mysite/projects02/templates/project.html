@@ -19,7 +19,7 @@
               <div class="col-md-7 mb-3 mb-sm-2">
                   <div class="card">
                     <div class="view overlay">
-                        <a href="{% url 'projects02:detail' project.id %}" >
+                        <a href="{% url 'projects02:carousel' project.id %}" >
                                 <img class="card-img-top" src="{{project.image.url}}" alt="">
                                 <div class="title">
                                     <h2>{{project.titel}}</h2>
@@ -34,7 +34,7 @@
                                      <div class="card-body">
                                         <h4 class="card-title">{{project.titel}}</h4
                                         <p class="card-text">{{project.kurzbeschreibung}}</p>
-                                        <a href="{% url 'projects02:detail' project.id %}" class="btn btn-primary btn-md">mehr erfahren</a>
+                                        <a href="{% url 'projects02:carousel' project.id %}" class="btn btn-primary btn-md">mehr erfahren</a>
                                      </div>
                                 </div>
                               </div>
@@ -43,7 +43,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{project.title}}</h4
                                         <p class="card-text">{{project.short_description}}</p>
-                                        <a href="{% url 'projects02:detail' project.id %}" class="btn btn-primary btn-md">Read more</a>
+                                        <a href="{% url 'projects02:carousel' project.id %}" class="btn btn-primary btn-md">Read more</a>
                                     </div>
                                 </div>
                             </div>

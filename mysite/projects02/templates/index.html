@@ -8,10 +8,11 @@
 <body>
 {% block page_content %}
 {% load static %}
+
 <div class="container">
     <div class="card">
       <div class="card-body">
-          <a href="{% url 'projects02:detail' featured.id %}" >
+          <a href="{% url 'projects02:carousel' featured.id %}">
               <img class="d-block w-50" src="{{featured.image.url}}" alt="">
           </a>
        </div>
