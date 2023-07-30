@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block page_content %}
+{% load static %}
+<div class="container">
+    <div class="card">
+      <div class="card-body">
+          <a href="{% url 'projects02:detail' featured.id %}" >
+              <img class="d-block w-50" src="{{featured.image.url}}" alt="">
+          </a>
+       </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+</body>
+</html>
