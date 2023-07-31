@@ -1,0 +1,26 @@
+.carousel {
+  margin: 7rem
+}
+
+.carousel-inner {
+  height: auto;
+}
+
+.carousel-control-prev {
+  margin-left: -100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
+}
+.carousel-control-prev-icon {
+  color: #fff;
+  border-radius: 25%;
+  background-color: #E8E6E6;
+}
+
+.carousel-control-next-icon {
+  color: #fff;
+  background-color:#E8E6E6;
+   border-radius: 25%;
+}
