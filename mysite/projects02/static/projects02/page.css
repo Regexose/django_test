@@ -1,5 +1,6 @@
+
 .carousel {
-  margin: 7rem
+  margin: 0.5rem
 }
 
 .carousel-inner {
@@ -7,24 +8,20 @@
 }
 
 .carousel-control-prev {
-  margin-left: -120px;
+  margin-left: -5%;
 }
 
 .carousel-control-next {
-  margin-right: -120px;
+  margin-right: -5%;
 }
+
 .carousel-control-prev-icon {
-  color: #E8E6E6;
-  border-radius: 25%;
-  background-color: #E8E6E6;
+  border-radius: 12%;
+  background-color: #060A0B;
 }
 
 .carousel-control-next-icon {
-  color: #000;
-   border-radius: 25%;
-    background-color: #E8E6E6;
+   border-radius: 12%;
+    background-color: #060A0B;
 }
 
-.carousel-indicators [data-bs-target]{
-  background-color: blue;
-}
