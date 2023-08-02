@@ -7,20 +7,24 @@
 }
 
 .carousel-control-prev {
-  margin-left: -100px;
+  margin-left: -120px;
 }
 
 .carousel-control-next {
-  margin-right: -100px;
+  margin-right: -120px;
 }
 .carousel-control-prev-icon {
-  color: #fff;
+  color: #E8E6E6;
   border-radius: 25%;
   background-color: #E8E6E6;
 }
 
 .carousel-control-next-icon {
-  color: #fff;
-  background-color:#E8E6E6;
+  color: #000;
    border-radius: 25%;
+    background-color: #E8E6E6;
+}
+
+.carousel-indicators [data-bs-target]{
+  background-color: blue;
 }

@@ -18,11 +18,13 @@ def detail_carousel(request, id):
     projects = Project.objects.all()
     project = get_object_or_404(Project, id=id)
     photos = ProjectImage.objects.filter(project=project)
+    ph_size = len(ProjectImage.objects.filter(project=project))
     embeds = ProjectEmbed.objects.filter(project=project)
     return render(request, 'detail_carousel.html', {
         'projects': projects,
         'project': project,
         'photos': photos,
+        'ph_size': ph_size,
         'embeds': embeds
     })
 
