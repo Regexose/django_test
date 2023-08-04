@@ -20,7 +20,5 @@ if path not in sys.path:
 
 #path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
-os.environ('DJANGO_SETTINGS_MODULE', 'mysite.settings')
-
 
 application = get_wsgi_application()
