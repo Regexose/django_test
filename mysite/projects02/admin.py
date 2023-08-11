@@ -1,4 +1,5 @@
 from django.contrib import admin
+import admin_thumbnails
 
 from .models import Project, ProjectImage, ProjectEmbed
 
@@ -17,8 +18,9 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProjectImage)
+@admin_thumbnails.thumbnail('image')
 class ProjectImageAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'image_thumbnail')
 
 @admin.register(ProjectEmbed)
 class ProjectEmbedAdmin(admin.ModelAdmin):

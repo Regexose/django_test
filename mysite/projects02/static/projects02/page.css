@@ -25,3 +25,9 @@
     background-color: #E8E6E6;
 }
 
+.carousel-caption {
+text-align: right;
+padding-bottom: 0.25rem;
+right: 5%;
+bottom: 0.0rem;
+}
